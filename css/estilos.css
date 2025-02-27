@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que padding y border no aumenten el tamaño */
+}
+
+body {
+    color: black; /* Todos los textos en negro */
+    font-family: 'Roboto', sans-serif; /* Fuente más limpia */
+    background: linear-gradient(135deg, #f3f4f6, #e9ecef); /* Fondo suave */
+}
+
+p {
+    color: black; /* Links también en negro */
+    text-decoration: none; /* Quita el subrayado */
+}
+
+a:hover {
+    color: #0056b3; /* Color al pasar el cursor */
+}
+
+
+/* Fondo con degradado */
+.bg-degradado-custom {
+    background: linear-gradient(to right, #007bff, #ff4d4d) !important; 
+    min-height: 100vh;
+    display: flex;
+}
+
+.container-fluid{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+/* Fondo con degradado suave */
+/* .bg-degradado-custom {
+    background: linear-gradient(to right, #72b6f9, #ff8a8a); 
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+} */
+
