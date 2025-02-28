@@ -37,11 +37,26 @@ $registros = $stmt_registros->fetchAll(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <div class="container mt-5">
-        <h1 class="mb-4">Información del Usuario</h1>
-
-        <!-- Mostrar todos los registros en una única tabla -->
-        <h2>Registros</h2>
+    <div class="container-fluid bg-degradado-custom">
+    <nav class="navbar fixed-top bg-body-tertiary py-3">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center gap-2">
+          <a href="dashboard.php" class="text-decoration-none text-dark d-flex align-items-center justify-content-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="me-2" width="24" height="24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+            </svg>
+            <span class="fs-5 me-5"><b>Home <<</b></span>
+          </a>
+        </div>
+        <div class="d-flex justify-content-center align-items-center flex-grow-1">
+          <h2 class="fs-1 mx-4"><b>GLUCOTRACK</b></h2>
+          <img src="./imagenes_video/logoPrincipal.jpg" alt="Logo Principal" class="img-fluid rounded" style="width: 50px; height: auto;">
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container mt-5 pt-4">
+        <h1 class="mb-4 text-center mt-4 text-light">Información del Usuario</h1>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -73,16 +88,8 @@ $registros = $stmt_registros->fetchAll(PDO::FETCH_ASSOC);
                             <td><?php echo htmlspecialchars($registro['correccion']); ?></td>
                             <td><?php echo htmlspecialchars($registro['hora']); ?></td>
                             <td>
-                                <a href="modificarRegistro.php?tabla=<?php echo htmlspecialchars($registro['tabla']); ?>&fecha=<?php echo htmlspecialchars($registro['fecha']); ?>&tipoComida=<?php echo htmlspecialchars($registro['tipoComida'] ?? ''); ?>" class="btn btn-warning btn-sm">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-                                        <path d="M12.146.854a.5.5 0 0 1 .708 0l2.292 2.292a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-4 1a.5.5 0 0 1-.65-.65l1-4a.5.5 0 0 1 .11-.168l10-10zM11.207 2L3 10.207V11h.793L13 3.793 11.207 2zM2 12v1h1l8-8-1-1-8 8z"/>
-                                    </svg>
-                                </a>
-                                <a href="borrarRegistro.php?tabla=<?php echo htmlspecialchars($registro['tabla']); ?>&fecha=<?php echo htmlspecialchars($registro['fecha']); ?>&tipoComida=<?php echo htmlspecialchars($registro['tipoComida'] ?? ''); ?>" class="btn btn-danger btn-sm">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                        <path d="M5.5 5.5A.5.5 0 0 1 6 5h4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5H6a.5.5 0 0 1-.5-.5v-7zM4.118 4a1 1 0 0 1 .876-.5h6.012a1 1 0 0 1 .876.5H14.5a.5.5 0 0 1 0 1h-1v9a2 2 0 0 1-2 2H4.5a2 2 0 0 1-2-2V5h-1a.5.5 0 0 1 0-1h1.618zM6.5 1a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1h-3z"/>
-                                    </svg>
-                                </a>
+                                <a href="modificarRegistro.php?tabla=<?php echo htmlspecialchars($registro['tabla']); ?>&fecha=<?php echo htmlspecialchars($registro['fecha']); ?>" class="btn btn-warning btn-sm">✏️</a>
+                                <a href="borrarRegistro.php?tabla=<?php echo htmlspecialchars($registro['tabla']); ?>&fecha=<?php echo htmlspecialchars($registro['fecha']); ?>" class="btn btn-danger btn-sm">🗑️</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -93,6 +100,7 @@ $registros = $stmt_registros->fetchAll(PDO::FETCH_ASSOC);
                 <?php endif; ?>
             </tbody>
         </table>
+    </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

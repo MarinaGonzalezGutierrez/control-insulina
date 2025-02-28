@@ -74,7 +74,7 @@ foreach ($glucosaData as $data) {
     </nav>
 
     <div class="mt-5 pt-5">
-        <h2 class="text-center">Estadísticas de Insulina y Glucosa</h2>
+        <h2 class="text-center text-light">Estadísticas de Insulina y Glucosa</h2>
         
         <!-- Gráfico de línea para la dosis de insulina -->
         <div class="chart-container mt-5">
