@@ -64,8 +64,13 @@ $username = $_SESSION['usuario_username'];
                 
                 <h2 class="fs-1" ><b>GLUCOTRACK</b></h2>
                     <img src="./imagenes_video/logoPrincipal.jpg" alt="Logo Principal" class="img-fluid rounded" style="width: 50px; height: auto;">
+                     <a href="logout.php" class="btn btn-secondary w-40 fw-bold float-start justify-content-end ms-auto">🚪➡️ Cerrar Sesión</a>
                 </div>
             
+               
+
+
+
                
             </div>
         </nav>
