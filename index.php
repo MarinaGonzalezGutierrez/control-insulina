@@ -1,7 +1,7 @@
-
 <?php
-require 'database/conexion.php';
+ob_start(); // Inicia el búfer de salida
 session_start();
+require 'database/conexion.php';
 
 $error = '';
 
@@ -27,6 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 }
+ob_end_flush(); // Envía el contenido del búfer y lo limpia
 ?>
 
 <!DOCTYPE html>

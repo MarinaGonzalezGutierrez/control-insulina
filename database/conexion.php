@@ -1,8 +1,8 @@
 <?php
-$host = 'localhost';
-$user = 'root';
-$pass = '';
-$dbname = 'dbdiabetes';
+$host = 'fdb1028.awardspace.net';
+$user = '4596315_dbdiabetes';
+$pass = 'marinagogu4';
+$dbname = '4596315_dbdiabetes';
 
 try{
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);

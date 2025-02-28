@@ -68,10 +68,6 @@ $username = $_SESSION['usuario_username'];
                 </div>
             
                
-
-
-
-               
             </div>
         </nav>
 

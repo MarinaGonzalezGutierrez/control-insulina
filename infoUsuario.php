@@ -77,19 +77,19 @@ $registros = $stmt_registros->fetchAll(PDO::FETCH_ASSOC);
                 <?php if (!empty($registros)): ?>
                     <?php foreach ($registros as $registro): ?>
                         <tr>
-                            <td><?php echo htmlspecialchars($registro['fecha']); ?></td>
-                            <td><?php echo htmlspecialchars($registro['tipo']); ?></td>
-                            <td><?php echo htmlspecialchars($registro['lenta']); ?></td>
-                            <td><?php echo htmlspecialchars($registro['deporte']); ?></td>
-                            <td><?php echo htmlspecialchars($registro['glucosa_pre']); ?></td>
-                            <td><?php echo htmlspecialchars($registro['glucosa_post']); ?></td>
-                            <td><?php echo htmlspecialchars($registro['racion']); ?></td>
-                            <td><?php echo htmlspecialchars($registro['insulina']); ?></td>
-                            <td><?php echo htmlspecialchars($registro['correccion']); ?></td>
-                            <td><?php echo htmlspecialchars($registro['hora']); ?></td>
+                            <td><?php echo htmlspecialchars($registro['fecha'] ?? ''); ?></td>
+                            <td><?php echo htmlspecialchars($registro['tipo'] ?? ''); ?></td>
+                            <td><?php echo htmlspecialchars($registro['lenta'] ?? ''); ?></td>
+                            <td><?php echo htmlspecialchars($registro['deporte'] ?? ''); ?></td>
+                            <td><?php echo htmlspecialchars($registro['glucosa_pre'] ?? ''); ?></td>
+                            <td><?php echo htmlspecialchars($registro['glucosa_post'] ?? ''); ?></td>
+                            <td><?php echo htmlspecialchars($registro['racion'] ?? ''); ?></td>
+                            <td><?php echo htmlspecialchars($registro['insulina'] ?? ''); ?></td>
+                            <td><?php echo htmlspecialchars($registro['correccion'] ?? ''); ?></td>
+                            <td><?php echo htmlspecialchars($registro['hora'] ?? ''); ?></td>
                             <td>
-                                <a href="modificarRegistro.php?tabla=<?php echo htmlspecialchars($registro['tabla']); ?>&fecha=<?php echo htmlspecialchars($registro['fecha']); ?>" class="btn btn-warning btn-sm">✏️</a>
-                                <a href="borrarRegistro.php?tabla=<?php echo htmlspecialchars($registro['tabla']); ?>&fecha=<?php echo htmlspecialchars($registro['fecha']); ?>" class="btn btn-danger btn-sm">🗑️</a>
+                                <a href="modificarRegistro.php?tabla=<?php echo htmlspecialchars($registro['tabla'] ?? ''); ?>&fecha=<?php echo htmlspecialchars($registro['fecha'] ?? ''); ?>" class="btn btn-warning btn-sm">✏️</a>
+                                <a href="borrarRegistro.php?tabla=<?php echo htmlspecialchars($registro['tabla'] ?? ''); ?>&fecha=<?php echo htmlspecialchars($registro['fecha'] ?? ''); ?>" class="btn btn-danger btn-sm">🗑️</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
