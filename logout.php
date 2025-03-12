@@ -8,5 +8,7 @@ if (session_status() === PHP_SESSION_ACTIVE) {
 
 // Redirige al usuario a la página de inicio
 header("Location: index.php");
+
+
 exit();
 ?>

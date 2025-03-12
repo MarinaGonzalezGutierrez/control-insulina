@@ -17,6 +17,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 
+    // Validar que la fecha de nacimiento no sea futura
+    $fechaActual = date("Y-m-d");
+    if ($fechaNac > $fechaActual) {
+        echo "Error: la fecha de nacimiento no puede ser futura.";
+        exit();
+    }
+
     //Verificar si el nombre de usuario ya existe
     $checkUser = $pdo->prepare("SELECT COUNT(*) FROM usuario WHERE username = ?");
     $checkUser->execute([$username]);
@@ -41,9 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error al registrar.";
     }
 }
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="es">
