@@ -114,7 +114,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 <div class="row mb-3">
                     <label for="glucosaHipo" class="col-form-label">Glucosa</label>
-                    <input type="number" class="form-control" id="glucosaHipo" name="glucosaHipo" required>
+                    <input type="number" class="form-control" id="glucosaHipo" name="glucosaHipo" min="40" max="70" required>
+                    <small class="form-text text-muted"> 54-70 mg/dl (sintomas leves) -54 mg/dl (mas graves) 40-50 mg/dl (muy grave)</small>
                 </div>
 
                 <button type="submit" class="btn btn-primary w-100">Insertar</button>

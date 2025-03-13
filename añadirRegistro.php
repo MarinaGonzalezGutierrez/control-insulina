@@ -59,6 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['glucosa_pre'])) {
   }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -72,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['glucosa_pre'])) {
 </head>
 
 <body>
-  <div class="container-fluid d-flex justify-content-center align-items-center bg-degradado-custom" style="min-height: 100vh;">
+  <div class="container-fluid d-flex justify-content-center align-items-center bg-degradado-custom" style="min-height: 100vh; padding-top: 6rem;">
     <!-- Nav -->
     <nav class="navbar fixed-top bg-body-tertiary py-4">
       <div class="container-fluid">
@@ -83,7 +84,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['glucosa_pre'])) {
               <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
             </svg>
             <span class="fs-5 me-5"><b>Home <<</b></span>
-         
           </a>
         </div>
         
