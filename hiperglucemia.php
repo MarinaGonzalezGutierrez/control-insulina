@@ -115,7 +115,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 <div class="row mb-3">
                     <label for="glucosaHiper" class="col-form-label">Glucosa</label>
-                    <input type="number" class="form-control" id="glucosaHiper" name="glucosaHiper" required>
+                    <input type="number" class="form-control" id="glucosaHiper" name="glucosaHiper" min="180" max="300" required>
+                    <small class="form-text text-muted">Rango recomendado: 180 - 300 mg/dL</small>
                 </div>
 
                 <div class="row mb-3">

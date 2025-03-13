@@ -102,13 +102,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['glucosa_pre'])) {
         <h3 class="text-center mb-3">Añadir Registro Comida</h3>
 
         <div class="row mb-3">
-          <label for="glucosa_pre" class="col-form-label">Glucosa 1H Antes</label>
-          <input type="number" class="form-control" id="glucosa_pre" name="glucosa_pre" >
+          <label for="glucosa_pre" class="col-form-label">Glucosa 1H Antes (mg/dL)</label>
+          <input type="number" class="form-control" id="glucosa_pre" name="glucosa_pre" min="70" max="130" required>
+          <small class="form-text text-muted">Rango recomendado: 70 - 130 mg/dL</small>
         </div>
 
         <div class="row mb-3">
-          <label for="glucosa_post" class="col-form-label">Glucosa 2H Después</label>
-          <input type="number" class="form-control" id="glucosa_post" name="glucosa_post" required>
+          <label for="glucosa_post" class="col-form-label">Glucosa 2H Después (mg/dL)</label>
+          <input type="number" class="form-control" id="glucosa_post" name="glucosa_post" min="100" max="180" required>
+          <small class="form-text text-muted">Rango recomendado: 100 - 180 mg/dL</small>
         </div>
 
         <div class="row mb-3">
@@ -117,8 +119,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['glucosa_pre'])) {
         </div>
 
         <div class="row mb-3">
-          <label for="insulina" class="col-form-label">Insulina</label>
-          <input type="number" class="form-control" id="insulina" name="insulina" required>
+          <label for="insulina" class="col-form-label">Insulina (U/mL)</label>
+          <input type="number" class="form-control" id="insulina" name="insulina" min="0" max="100" required>
+          <small class="form-text text-muted">Rango recomendado: 0 - 100 U/mL</small>
         </div>
 
         <div class="row mb-3">
